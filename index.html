@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QBM Stuttgart | Qualitäts- &amp; Projektmanagement Beratung</title>
+  <meta name="description" content="QBM Stuttgart – Ihr kompetenter Partner für Qualitäts- und Projektmanagement in Stuttgart. Consulting, Interim Management, Prozessoptimierung. Strukturiert, zuverlässig, ergebnisorientiert.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://www.qbm-stuttgart.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="QBM Stuttgart | Qualitäts- &amp; Projektmanagement Beratung">
+  <meta property="og:description" content="Ihr kompetenter Partner für Qualitäts- und Projektmanagement in Stuttgart. Consulting, Interim Management, Prozessoptimierung.">
+  <meta property="og:image" content="https://www.qbm-stuttgart.com/og-image.jpg">
+  <meta property="og:url" content="https://www.qbm-stuttgart.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="QBM Stuttgart">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="QBM Stuttgart | Qualitäts- &amp; Projektmanagement Beratung">
+  <meta name="twitter:description" content="Ihr kompetenter Partner für Qualitäts- und Projektmanagement in Stuttgart.">
+  <meta name="twitter:image" content="https://www.qbm-stuttgart.com/og-image.jpg">
+
+  <!-- Google Fonts: Raleway -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Schema.org LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "QBM Stuttgart",
+    "description": "Ihr kompetenter Partner für Qualitäts- und Projektmanagement in Stuttgart.",
+    "url": "https://www.qbm-stuttgart.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Stuttgart",
+      "addressRegion": "Baden-Württemberg",
+      "addressCountry": "DE"
+    },
+    "sameAs": [],
+    "service": [
+      {
+        "@type": "Service",
+        "name": "Consulting & Beratung",
+        "description": "Prozessanalyse entlang der Wertschöpfungskette mit Fokus auf operative Umsetzung und Shopfloor Management."
+      },
+      {
+        "@type": "Service",
+        "name": "Interim Management",
+        "description": "Erfahrene Führungskräfte auf Zeit für kritische Projekte."
+      },
+      {
+        "@type": "Service",
+        "name": "Prozessmanagement",
+        "description": "Bestehende Prozesse analysieren, klare Strukturen definieren und effiziente Abläufe implementieren."
+      },
+      {
+        "@type": "Service",
+        "name": "Qualitätsmanagement",
+        "description": "Implementierung und Auditierung von QM-Systemen nach internationalen Standards."
+      },
+      {
+        "@type": "Service",
+        "name": "Projektmanagement",
+        "description": "Professionelle Projektsteuerung von der Initiierung bis zum Abschluss."
+      },
+      {
+        "@type": "Service",
+        "name": "Training & Workshop",
+        "description": "Praxisorientierte Schulungen und Workshops für Ihr Team."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Raleway', system-ui, -apple-system, sans-serif;
+      background-color: #0b1a2e;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ===== VARIABLES ===== */
+    :root {
+      --navy-dark: #080e1c;
+      --navy: #0b1a2e;
+      --navy-mid: #0f2240;
+      --navy-light: #132d50;
+      --accent: #e8952e;
+      --accent-hover: #d4841f;
+      --accent-gold: #f0a830;
+      --white: #ffffff;
+      --gray-100: #f5f7fa;
+      --gray-200: #e8ecf1;
+      --gray-400: #94a3b8;
+      --gray-600: #64748b;
+      --gray-800: #334155;
+      --text-dark: #1e293b;
+      --text-body: #475569;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-card-hover: 0 8px 40px rgba(0,0,0,0.12);
+      --max-width: 1200px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===== UTILITY ===== */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+      background: rgba(8, 14, 28, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .header.scrolled {
+      background: rgba(8, 14, 28, 0.95);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      color: var(--white);
+    }
+
+    .logo-icon {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-right: 6px;
+    }
+
+    .logo-icon span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+    }
+
+    .logo-icon span:first-child {
+      background: var(--accent);
+    }
+
+    .logo-icon span:nth-child(2) {
+      border-color: #e74c3c;
+      background: #e74c3c;
+      margin-left: -4px;
+    }
+
+    .logo-text-sub {
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      display: block;
+      margin-top: -2px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .desktop-nav a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--gray-400);
+      letter-spacing: 0.3px;
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .desktop-nav a:hover {
+      color: var(--white);
+    }
+
+    .desktop-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition);
+    }
+
+    .desktop-nav a:hover::after {
+      width: 100%;
+    }
+
+    .btn-anfragen {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 24px;
+      background: var(--accent);
+      color: var(--white) !important;
+      font-weight: 600;
+      font-size: 0.85rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+      letter-spacing: 0.3px;
+    }
+
+    .btn-anfragen:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-anfragen::after {
+      display: none !important;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: transform var(--transition), opacity var(--transition);
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(8, 14, 28, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .mobile-menu a {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.5px;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--accent);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 80%;
+      height: 150%;
+      background: radial-gradient(ellipse, rgba(232, 149, 46, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -20%;
+      width: 60%;
+      height: 80%;
+      background: radial-gradient(ellipse, rgba(15, 34, 64, 0.8) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--white);
+    }
+
+    .hero h1 .highlight {
+      color: var(--accent-gold);
+      display: block;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 400;
+      color: var(--gray-400);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      letter-spacing: 0.3px;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 149, 46, 0.3);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: transparent;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: border-color var(--transition), background var(--transition), transform var(--transition);
+      letter-spacing: 0.3px;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.05);
+      transform: translateY(-2px);
+    }
+
+    /* ===== LEISTUNGEN ===== */
+    .leistungen {
+      padding: 80px 24px 100px;
+      position: relative;
+    }
+
+    .leistungen-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .leistungen-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .leistungen-grid {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .leistung-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      color: var(--text-dark);
+      transition: transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .leistung-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .leistung-number {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .leistung-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      color: var(--navy);
+    }
+
+    .leistung-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+      line-height: 1.3;
+    }
+
+    .leistung-card p {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .leistung-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent) !important;
+      transition: gap var(--transition);
+    }
+
+    .leistung-link:hover {
+      gap: 10px;
+    }
+
+    .leistung-link svg {
+      width: 16px;
+      height: 16px;
+      transition: transform var(--transition);
+    }
+
+    .leistung-link:hover svg {
+      transform: translateX(2px);
+    }
+
+    /* ===== PDCA PROZESS ===== */
+    .pdca {
+      padding: 100px 24px;
+      background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+      position: relative;
+    }
+
+    .pdca::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    }
+
+    .pdca-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .pdca-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .pdca-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .pdca-label::before,
+    .pdca-label::after {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .pdca h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .pdca-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .pdca-step {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 36px 24px;
+      text-align: center;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+      position: relative;
+    }
+
+    .pdca-step:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(232, 149, 46, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(232, 149, 46, 0.3);
+    }
+
+    .pdca-step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .pdca-step p {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      line-height: 1.65;
+    }
+
+    /* Step connector arrows */
+    .pdca-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 60px;
+      right: -16px;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid rgba(255,255,255,0.15);
+      border-right: 2px solid rgba(255,255,255,0.15);
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      padding: 100px 24px;
+      text-align: center;
+      position: relative;
+      background: var(--navy-dark);
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(232, 149, 46, 0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: 1.05rem;
+      color: var(--gray-400);
+      max-width: 500px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .btn-cta-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      letter-spacing: 0.3px;
+    }
+
+    .btn-cta-large:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(232, 149, 46, 0.3);
+    }
+
+    .btn-cta-large svg {
+      width: 18px;
+      height: 18px;
+      transition: transform var(--transition);
+    }
+
+    .btn-cta-large:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 64px 24px 0;
+      background: var(--navy-dark);
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-slogan {
+      font-size: 0.88rem;
+      color: var(--gray-400);
+      line-height: 1.65;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.88rem;
+      color: var(--gray-400);
+      transition: color var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--gray-600);
+    }
+
+    .footer-bottom a {
+      color: var(--gray-600);
+      transition: color var(--transition);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gray-400);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ===== COOKIE BANNER (Placeholder) ===== */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(8, 14, 28, 0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 24px;
+      z-index: 10000;
+      display: none;
+    }
+
+    .cookie-banner.show {
+      display: block;
+    }
+
+    .cookie-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .cookie-text {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .cookie-text a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .cookie-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .cookie-btn {
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      font-family: 'Raleway', sans-serif;
+      cursor: pointer;
+      transition: background var(--transition);
+      border: none;
+    }
+
+    .cookie-btn-accept {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .cookie-btn-accept:hover {
+      background: var(--accent-hover);
+    }
+
+    .cookie-btn-decline {
+      background: rgba(255,255,255,0.08);
+      color: var(--gray-400);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .cookie-btn-decline:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger delays for cards */
+    .leistung-card:nth-child(1) { transition-delay: 0s; }
+    .leistung-card:nth-child(2) { transition-delay: 0.08s; }
+    .leistung-card:nth-child(3) { transition-delay: 0.16s; }
+    .leistung-card:nth-child(4) { transition-delay: 0.24s; }
+    .leistung-card:nth-child(5) { transition-delay: 0.32s; }
+    .leistung-card:nth-child(6) { transition-delay: 0.4s; }
+
+    .pdca-step:nth-child(1) { transition-delay: 0s; }
+    .pdca-step:nth-child(2) { transition-delay: 0.1s; }
+    .pdca-step:nth-child(3) { transition-delay: 0.2s; }
+    .pdca-step:nth-child(4) { transition-delay: 0.3s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .leistungen-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pdca-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pdca-step:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .header-inner {
+        height: 64px;
+      }
+
+      .hero {
+        min-height: 85vh;
+        padding: 100px 24px 60px;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero-sub {
+        font-size: 0.95rem;
+      }
+
+      .leistungen-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .pdca-steps {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .pdca-step::after {
+        display: none !important;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .cookie-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons a {
+        text-align: center;
+        justify-content: center;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="QBM Stuttgart – Startseite">
+        <span class="logo-icon"><span></span><span></span></span>
+        <span>
+          QBM
+          <span class="logo-text-sub">Stuttgart</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <a href="#home">Home</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="btn-anfragen">Anfragen</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile Navigation">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#leistungen" class="mobile-link">Leistungen</a>
+    <a href="#ueber-uns" class="mobile-link">Über uns</a>
+    <a href="#kontakt" class="mobile-link">Kontakt</a>
+    <a href="#kontakt" class="btn-anfragen mobile-link">Anfragen</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="fade-up">
+        Go for<br>
+        <span class="highlight">Quality.</span>
+      </h1>
+      <p class="hero-sub fade-up">
+        Ihr kompetenter Partner in den Bereichen Qualitäts- und Projektmanagement. Strukturiert, zuverlässig, ergebnisorientiert.
+      </p>
+      <div class="hero-buttons fade-up">
+        <a href="#leistungen" class="btn-primary">
+          Leistungsspektrum
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#kontakt" class="btn-secondary">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEISTUNGEN ===== -->
+  <section class="leistungen" id="leistungen">
+    <div class="container">
+      <div class="leistungen-label fade-up">Leistungen</div>
+    </div>
+    <div class="leistungen-grid">
+
+      <a href="#" class="leistung-card fade-up">
+        <span class="leistung-number">01</span>
+        <div class="leistung-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <h3>Consulting &amp; Beratung</h3>
+        <p>Prozessanalyse entlang der Wertschöpfungskette mit Fokus auf operative Umsetzung und Shopfloor Management.</p>
+        <span class="leistung-link">
+          Mehr erfahren
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="#" class="leistung-card fade-up">
+        <span class="leistung-number">02</span>
+        <div class="leistung-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+        </div>
+        <h3>Interim Management</h3>
+        <p>Erfahrene Führungskräfte auf Zeit für kritische Projekte.</p>
+        <span class="leistung-link">
+          Mehr erfahren
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="#" class="leistung-card fade-up">
+        <span class="leistung-number">03</span>
+        <div class="leistung-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <h3>Prozessmanagement</h3>
+        <p>Bestehende Prozesse analysieren, klare Strukturen definieren und effiziente Abläufe implementieren.</p>
+        <span class="leistung-link">
+          Mehr erfahren
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="#" class="leistung-card fade-up">
+        <span class="leistung-number">04</span>
+        <div class="leistung-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Qualitätsmanagement</h3>
+        <p>Implementierung und Auditierung von QM-Systemen nach internationalen Standards.</p>
+        <span class="leistung-link">
+          Mehr erfahren
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="#" class="leistung-card fade-up">
+        <span class="leistung-number">05</span>
+        <div class="leistung-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+        </div>
+        <h3>Projektmanagement</h3>
+        <p>Professionelle Projektsteuerung von der Initiierung bis zum Abschluss.</p>
+        <span class="leistung-link">
+          Mehr erfahren
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a href="#" class="leistung-card fade-up">
+        <span class="leistung-number">06</span>
+        <div class="leistung-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3>Training &amp; Workshop</h3>
+        <p>Praxisorientierte Schulungen und Workshops für Ihr Team.</p>
+        <span class="leistung-link">
+          Mehr erfahren
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ===== PDCA PROZESS ===== -->
+  <section class="pdca" id="ueber-uns">
+    <div class="pdca-inner">
+      <div class="pdca-header">
+        <div class="pdca-label">Unser Ansatz</div>
+        <h2 class="fade-up">Strukturiert zum Ziel.</h2>
+      </div>
+
+      <div class="pdca-steps">
+        <div class="pdca-step fade-up">
+          <div class="step-number">1</div>
+          <h3>Analysieren &amp; Planen</h3>
+          <p>Ist-Zustand erfassen, Ziele definieren und einen klaren Maßnahmenplan erarbeiten.</p>
+        </div>
+
+        <div class="pdca-step fade-up">
+          <div class="step-number">2</div>
+          <h3>Umsetzen &amp; Implementieren</h3>
+          <p>Maßnahmen operativ umsetzen – direkt am Shopfloor, praxisnah und strukturiert.</p>
+        </div>
+
+        <div class="pdca-step fade-up">
+          <div class="step-number">3</div>
+          <h3>Prüfen &amp; Messen</h3>
+          <p>Ergebnisse gegen Ziele prüfen, Kennzahlen auswerten und Abweichungen identifizieren.</p>
+        </div>
+
+        <div class="pdca-step fade-up">
+          <div class="step-number">4</div>
+          <h3>Standardisieren &amp; Verbessern</h3>
+          <p>Erfolgreiche Maßnahmen verankern, Standards setzen und den nächsten Zyklus starten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section" id="kontakt">
+    <div class="cta-inner">
+      <h2 class="fade-up">Bereit für Qualität?</h2>
+      <p class="fade-up">Lassen Sie uns gemeinsam Ihre Prozesse optimieren und nachhaltige Ergebnisse erzielen.</p>
+      <a href="https://www.qbm-stuttgart.com/kontakt" class="btn-cta-large fade-up">
+        Projekt besprechen
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="QBM Stuttgart – Startseite">
+          <span class="logo-icon"><span></span><span></span></span>
+          <span>
+            QBM
+            <span class="logo-text-sub">Stuttgart</span>
+          </span>
+        </a>
+        <p class="footer-slogan">Ihr kompetenter Partner für Qualitäts- und Projektmanagement. Think Local, Act Global.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="https://www.qbm-stuttgart.com/impressum">Impressum</a></li>
+          <li><a href="https://www.qbm-stuttgart.com/datenschutz">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 QBM Stuttgart. Alle Rechte vorbehalten.</span>
+      <div class="footer-legal">
+        <a href="https://www.qbm-stuttgart.com/impressum">Impressum</a>
+        <a href="https://www.qbm-stuttgart.com/datenschutz">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== COOKIE BANNER (Placeholder) ===== -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-inner">
+      <p class="cookie-text">
+        Diese Website verwendet Cookies, um Ihnen die bestmögliche Nutzererfahrung zu bieten.
+        Weitere Informationen finden Sie in unserer <a href="https://www.qbm-stuttgart.com/datenschutz">Datenschutzerklärung</a>.
+      </p>
+      <div class="cookie-buttons">
+        <button class="cookie-btn cookie-btn-decline" id="cookieDecline">Nur notwendige</button>
+        <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Alle akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ===== STICKY HEADER ===== */
+    (function() {
+      const header = document.getElementById('header');
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScroll = currentScroll;
+      }, { passive: true });
+    })();
+
+    /* ===== HAMBURGER MENU ===== */
+    (function() {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
+
+      hamburger.addEventListener('click', function() {
+        const isOpen = mobileMenu.classList.contains('open');
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', !isOpen);
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+      });
+
+      mobileLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+
+    /* ===== SCROLL ANIMATIONS (IntersectionObserver) ===== */
+    (function() {
+      const elements = document.querySelectorAll('.fade-up');
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        elements.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback: show all
+        elements.forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+    })();
+
+    /* ===== SMOOTH SCROLL for anchor links ===== */
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const id = this.getAttribute('href');
+          if (id === '#') return;
+          const target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const targetPos = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({
+              top: targetPos,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    })();
+
+    /* ===== COOKIE BANNER ===== */
+    (function() {
+      const banner = document.getElementById('cookieBanner');
+      const acceptBtn = document.getElementById('cookieAccept');
+      const declineBtn = document.getElementById('cookieDecline');
+
+      // Show banner after short delay if no consent stored
+      if (!localStorage.getItem('qbm_cookie_consent')) {
+        setTimeout(function() {
+          banner.classList.add('show');
+        }, 1500);
+      }
+
+      acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('qbm_cookie_consent', 'all');
+        banner.classList.remove('show');
+      });
+
+      declineBtn.addEventListener('click', function() {
+        localStorage.setItem('qbm_cookie_consent', 'essential');
+        banner.classList.remove('show');
+      });
+    })();
+  </script>
+
+</body>
+</html>
