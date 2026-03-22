@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projektmanagement | QBM Stuttgart</title>
+  <meta name="description" content="Professionelles Projektmanagement von der Idee bis zum erfolgreichen Abschluss. Strukturiert, risikobewusst, erfolgsorientiert.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.qbm-stuttgart.com/projektmanagement">
+
+  <!-- Google Fonts: Raleway -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Raleway', system-ui, -apple-system, sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ===== VARIABLES ===== */
+    :root {
+      --navy-dark: #071e3b;
+      --navy: #061d3a;
+      --navy-mid: #0a2347;
+      --navy-light: #0d2a54;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --accent-gold: #f59e0b;
+      --accent-blue: #3580d9;
+      --white: #ffffff;
+      --gray-100: #f9fafb;
+      --gray-200: #f3f4f6;
+      --gray-400: rgba(255,255,255,0.4);
+      --gray-600: rgba(255,255,255,0.4);
+      --gray-800: #334155;
+      --text-dark: #1a1a1a;
+      --text-body: #1a1a1a;
+      --card-title: #061d3a;
+      --nav-link: #334155;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-card-hover: 0 8px 40px rgba(0,0,0,0.12);
+      --max-width: 1200px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===== UTILITY ===== */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 92px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      color: var(--text-dark);
+    }
+
+    .logo-icon {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-right: 6px;
+    }
+
+    .logo-icon span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+    }
+
+    .logo-icon span:first-child {
+      background: var(--accent);
+    }
+
+    .logo-icon span:nth-child(2) {
+      border-color: #e74c3c;
+      background: #e74c3c;
+      margin-left: -4px;
+    }
+
+    .logo-text-sub {
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-body);
+      display: block;
+      margin-top: -2px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .desktop-nav a {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--nav-link);
+      letter-spacing: normal;
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .desktop-nav a:hover {
+      color: var(--text-dark);
+    }
+
+    .desktop-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--nav-link);
+      transition: width var(--transition);
+    }
+
+    .desktop-nav a:hover::after {
+      width: 100%;
+    }
+
+    .btn-anfragen {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: var(--accent);
+      color: var(--navy) !important;
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+      letter-spacing: 0.78px;
+      text-transform: uppercase;
+    }
+
+    .btn-anfragen:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-anfragen::after {
+      display: none !important;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-dark);
+      transition: transform var(--transition), opacity var(--transition);
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .mobile-menu a {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--nav-link);
+      letter-spacing: 0.5px;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--text-dark);
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== SERVICE PAGE STYLES (sp-*) ===== */
+
+    /* ===== SP-HERO ===== */
+    .sp-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 24px 80px;
+      position: relative;
+      overflow: hidden;
+      background-image: url("https://www.qbm-stuttgart.com/wp-content/uploads/2026/02/header-background.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: var(--navy-dark);
+    }
+
+    .sp-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 30, 59, 0.45);
+      pointer-events: none;
+    }
+
+    .sp-hero-content {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb a {
+      color: rgba(255, 255, 255, 0.7);
+      transition: color var(--transition);
+    }
+
+    .breadcrumb a:hover {
+      color: var(--white);
+    }
+
+    .breadcrumb span {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .sp-hero h1 {
+      font-size: 3.6rem;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--white);
+      letter-spacing: -1.2px;
+    }
+
+    .sp-hero h1 .highlight {
+      color: var(--accent);
+      display: inline;
+    }
+
+    .sp-hero-subtitle {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* ===== SP-ABOUT ===== */
+    .sp-about {
+      padding: 80px 24px;
+      background-color: var(--white);
+    }
+
+    .sp-about-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-about-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .sp-about-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .sp-about h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 32px;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-about-text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .sp-about-text p {
+      font-size: 1rem;
+      color: var(--text-body);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .sp-about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .sp-about-highlight {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy-dark);
+      background: var(--gray-100);
+      padding: 24px;
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      line-height: 1.7;
+    }
+
+    /* ===== SP-DETAIL ===== */
+    .sp-detail {
+      padding: 80px 24px;
+      background-color: var(--gray-100);
+    }
+
+    .sp-detail-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-detail-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .sp-detail-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .sp-detail h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 56px;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .sp-detail-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid #e5e7eb;
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sp-detail-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .sp-detail-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--card-title);
+      margin-bottom: 16px;
+      line-height: 1.4;
+      letter-spacing: -0.3px;
+    }
+
+    .sp-detail-card p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    /* Stagger animations for detail cards */
+    .sp-detail-card:nth-child(1) { transition-delay: 0s; }
+    .sp-detail-card:nth-child(2) { transition-delay: 0.08s; }
+    .sp-detail-card:nth-child(3) { transition-delay: 0.16s; }
+    .sp-detail-card:nth-child(4) { transition-delay: 0.24s; }
+    .sp-detail-card:nth-child(5) { transition-delay: 0.32s; }
+    .sp-detail-card:nth-child(6) { transition-delay: 0.4s; }
+
+    /* ===== SP-BRANCHEN ===== */
+    .sp-branchen {
+      padding: 80px 24px;
+      background-color: var(--white);
+    }
+
+    .sp-branchen-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-branchen-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .sp-branchen-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .sp-branchen h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 56px;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-branchen-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .sp-branche {
+      background: var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 40px 24px;
+      text-align: center;
+      transition: background var(--transition), transform var(--transition);
+      cursor: pointer;
+    }
+
+    .sp-branche:hover {
+      background: var(--accent);
+      color: var(--white);
+      transform: translateY(-4px);
+    }
+
+    .sp-branche h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--card-title);
+      line-height: 1.4;
+    }
+
+    .sp-branche:hover h3 {
+      color: var(--white);
+    }
+
+    /* ===== SP-NUTZEN ===== */
+    .sp-nutzen {
+      padding: 80px 24px;
+      background-color: var(--gray-100);
+    }
+
+    .sp-nutzen-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-nutzen-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .sp-nutzen-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .sp-nutzen h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 56px;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-nutzen-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .sp-nutzen-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .sp-nutzen-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .sp-nutzen-card-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 1.5rem;
+    }
+
+    .sp-nutzen-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--card-title);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .sp-nutzen-card p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    /* ===== SP-PDCA ===== */
+    .sp-pdca {
+      padding: 100px 24px;
+      background-image: url("https://www.qbm-stuttgart.com/wp-content/uploads/2026/02/methodik-bg.png");
+      background-size: cover;
+      background-position: center;
+      background-color: var(--navy-dark);
+      position: relative;
+    }
+
+    .sp-pdca::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    }
+
+    .sp-pdca-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-pdca-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .sp-pdca-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .sp-pdca-label::before,
+    .sp-pdca-label::after {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .sp-pdca h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-pdca-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .sp-pdca-step {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius-lg);
+      padding: 36px 24px;
+      text-align: center;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+      position: relative;
+    }
+
+    .sp-pdca-step:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(232, 149, 46, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .sp-step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+    }
+
+    .sp-pdca-step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .sp-pdca-step p {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      line-height: 1.65;
+    }
+
+    /* Step connector arrows */
+    .sp-pdca-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 60px;
+      right: -16px;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid rgba(255,255,255,0.15);
+      border-right: 2px solid rgba(255,255,255,0.15);
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+
+    /* Stagger animations for PDCA steps */
+    .sp-pdca-step:nth-child(1) { transition-delay: 0s; }
+    .sp-pdca-step:nth-child(2) { transition-delay: 0.1s; }
+    .sp-pdca-step:nth-child(3) { transition-delay: 0.2s; }
+    .sp-pdca-step:nth-child(4) { transition-delay: 0.3s; }
+
+    /* ===== SP-FAQ ===== */
+    .sp-faq {
+      padding: 80px 24px;
+      background-color: var(--white);
+    }
+
+    .sp-faq-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-faq-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .sp-faq-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .sp-faq h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--navy-dark);
+      margin-bottom: 56px;
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 900px;
+    }
+
+    .faq-item {
+      background: var(--gray-100);
+      border-radius: var(--radius-lg);
+      border: 1px solid #e5e7eb;
+      transition: background var(--transition), border-color var(--transition);
+      overflow: hidden;
+    }
+
+    .faq-item.active {
+      background: var(--white);
+      border-color: var(--accent);
+    }
+
+    .faq-question {
+      padding: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      user-select: none;
+      transition: background var(--transition);
+    }
+
+    .faq-question:hover {
+      background: rgba(0, 0, 0, 0.02);
+    }
+
+    .faq-item.active .faq-question {
+      background: transparent;
+    }
+
+    .faq-question-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--card-title);
+      line-height: 1.4;
+      flex: 1;
+    }
+
+    .faq-question-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      transition: transform var(--transition);
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-question-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition), padding var(--transition);
+      background: var(--white);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 0 24px 24px 24px;
+    }
+
+    .faq-answer p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    /* ===== SP-CTA ===== */
+    .sp-cta {
+      padding: 100px 24px;
+      text-align: center;
+      position: relative;
+      background-image: url("https://www.qbm-stuttgart.com/wp-content/uploads/2026/03/cta-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-color: var(--navy-dark);
+    }
+
+    .sp-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 30, 59, 0.6);
+      pointer-events: none;
+    }
+
+    .sp-cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sp-cta h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.8px;
+      line-height: 1.2;
+    }
+
+    .sp-cta p {
+      font-size: 1.05rem;
+      color: var(--gray-400);
+      max-width: 500px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .btn-cta-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      letter-spacing: 0.3px;
+    }
+
+    .btn-cta-large:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(232, 149, 46, 0.3);
+    }
+
+    .btn-cta-large svg {
+      width: 18px;
+      height: 18px;
+      transition: transform var(--transition);
+    }
+
+    .btn-cta-large:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 64px 24px 0;
+      background-image: url("https://www.qbm-stuttgart.com/wp-content/uploads/2026/02/header-background.png");
+      background-size: cover;
+      background-position: center;
+      background-color: var(--navy-dark);
+      color: var(--white);
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-slogan {
+      font-size: 0.88rem;
+      color: var(--gray-400);
+      line-height: 1.65;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.88rem;
+      color: var(--gray-400);
+      transition: color var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--gray-600);
+    }
+
+    .footer-bottom a {
+      color: var(--gray-600);
+      transition: color var(--transition);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gray-400);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .sp-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sp-branchen-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sp-nutzen-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sp-pdca-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sp-pdca-step:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .header-inner {
+        height: 64px;
+      }
+
+      .sp-hero {
+        min-height: 50vh;
+        padding: 100px 24px 60px;
+      }
+
+      .sp-hero h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+      }
+
+      .sp-hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .sp-about-text {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .sp-detail h2,
+      .sp-branchen h2,
+      .sp-nutzen h2,
+      .sp-pdca h2,
+      .sp-faq h2,
+      .sp-cta h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+      }
+
+      .sp-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .sp-branchen-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .sp-nutzen-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .sp-pdca-steps {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .sp-pdca-step::after {
+        display: none !important;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sp-hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .sp-branchen-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-question {
+        padding: 16px;
+      }
+
+      .faq-answer {
+        padding: 0 16px 16px 16px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="QBM Stuttgart – Startseite">
+        <div class="logo-icon">
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <div>QBM STUTTGART</div>
+          <div class="logo-text-sub">Consulting</div>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="index.html#ueber-uns">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html" class="btn-anfragen">Anfragen</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-link">Home</a>
+    <a href="index.html#leistungen" class="mobile-link">Leistungen</a>
+    <a href="index.html#ueber-uns" class="mobile-link">Über uns</a>
+    <a href="kontakt.html" class="mobile-link">Kontakt</a>
+    <a href="kontakt.html" class="btn-anfragen mobile-link">Anfragen</a>
+  </div>
+
+  <!-- ===== SP-HERO ===== -->
+  <section class="sp-hero">
+    <div class="sp-hero-content">
+      <div class="breadcrumb fade-up">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="leistungen.html">Leistungen</a>
+        <span>/</span>
+        <span>Projektmanagement</span>
+      </div>
+      <h1 class="fade-up">Projektmanagement</h1>
+      <p class="sp-hero-subtitle fade-up">Von der Idee bis zum erfolgreichen Abschluss.</p>
+    </div>
+  </section>
+
+  <!-- ===== SP-ABOUT ===== -->
+  <section class="sp-about">
+    <div class="sp-about-inner">
+      <div class="sp-about-label fade-up">Methode</div>
+      <h2 class="fade-up">Projekte strukturiert zum Erfolg führen.</h2>
+      <div class="sp-about-text fade-up">
+        <div>
+          <p>Professionelles Projektmanagement ist das Rückgrat erfolgreicher Veränderungen. Wir kombinieren bewährte PM-Methodologien mit praktischer Erfahrung aus hunderten Projekten, um Ihre Ziele termingerecht und budgetgetreu zu erreichen.</p>
+          <p>Ob klassisch-sequenziell oder agil – wir wählen die beste Methode für Ihr Projekt aus. Unser Ansatz umfasst klare Planung, kontinuierliche Risikominderung, proaktive Stakeholder-Kommunikation und messbare Erfolgskontrollen.</p>
+        </div>
+        <div class="sp-about-highlight">
+          Ein Projekt ohne Plan ist wie eine Reise ohne Karte — man kommt an, aber selten dort, wo man hinwollte.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SP-DETAIL ===== -->
+  <section class="sp-detail">
+    <div class="sp-detail-inner">
+      <div class="sp-detail-label fade-up">Leistungsspektrum</div>
+      <h2 class="fade-up">Unsere PM-Services</h2>
+      <div class="sp-detail-grid">
+        <div class="sp-detail-card fade-up">
+          <h3>Projektplanung & -initiierung</h3>
+          <p>Von der Ideenfindung zur Projektdefinition: klare Ziele, Scope, Rollen und Ressourcenplan.</p>
+        </div>
+        <div class="sp-detail-card fade-up">
+          <h3>Risikomanagement</h3>
+          <p>Frühe Risikoeidentifikation, kontinuierliche Überwachung und proaktive Gegenmaßnahmen.</p>
+        </div>
+        <div class="sp-detail-card fade-up">
+          <h3>Stakeholder-Management</h3>
+          <p>Klare Kommunikation, Transparenz und aktive Einbindung aller Beteiligten.</p>
+        </div>
+        <div class="sp-detail-card fade-up">
+          <h3>Agiles Projektmanagement</h3>
+          <p>Flexible Methoden (Scrum, Kanban) für sich schnell ändernde Anforderungen.</p>
+        </div>
+        <div class="sp-detail-card fade-up">
+          <h3>Multiprojektmanagement</h3>
+          <p>Steuerung mehrerer Projekte als Portfolio mit optimierter Ressourcenallokation.</p>
+        </div>
+        <div class="sp-detail-card fade-up">
+          <h3>Projektcontrolling & Reporting</h3>
+          <p>Echtzeit-Überwachung von Budget, Termine und Qualität mit aussagekräftigen Berichten.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SP-BRANCHEN ===== -->
+  <section class="sp-branchen">
+    <div class="sp-branchen-inner">
+      <div class="sp-branchen-label fade-up">Branchen</div>
+      <h2 class="fade-up">Wo wir erfolgreich sind</h2>
+      <div class="sp-branchen-grid">
+        <div class="sp-branche fade-up">
+          <h3>Automotive</h3>
+        </div>
+        <div class="sp-branche fade-up">
+          <h3>Industrie</h3>
+        </div>
+        <div class="sp-branche fade-up">
+          <h3>Bau & Infrastruktur</h3>
+        </div>
+        <div class="sp-branche fade-up">
+          <h3>IT & Software</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SP-NUTZEN ===== -->
+  <section class="sp-nutzen">
+    <div class="sp-nutzen-inner">
+      <div class="sp-nutzen-label fade-up">Nutzen</div>
+      <h2 class="fade-up">Das bringen Sie vom Tisch</h2>
+      <div class="sp-nutzen-grid">
+        <div class="sp-nutzen-card fade-up">
+          <div class="sp-nutzen-card-icon">✓</div>
+          <h3>Termingerechte Lieferung</h3>
+          <p>Strenge Einhaltung von Deadlines durch strukturierte Planung und Überwachung.</p>
+        </div>
+        <div class="sp-nutzen-card fade-up">
+          <div class="sp-nutzen-card-icon">✓</div>
+          <h3>Budgetkontrolle</h3>
+          <p>Kostenschätzung und kontinuierliche Kostenverfolgung zur Vermeidung von Überläufen.</p>
+        </div>
+        <div class="sp-nutzen-card fade-up">
+          <div class="sp-nutzen-card-icon">✓</div>
+          <h3>Klare Verantwortlichkeiten</h3>
+          <p>Transparente Struktur mit definierten Rollen, Aufgaben und Entscheidungswegen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SP-PDCA ===== -->
+  <section class="sp-pdca">
+    <div class="sp-pdca-inner">
+      <div class="sp-pdca-header">
+        <div class="sp-pdca-label">Unser PM-Zyklus</div>
+        <h2 class="fade-up">PDCA – Kontinuierliche Verbesserung</h2>
+      </div>
+
+      <div class="sp-pdca-steps">
+        <div class="sp-pdca-step fade-up">
+          <div class="sp-step-number">1</div>
+          <h3>Analysieren & Planen</h3>
+          <p>Projektanforderungen analysieren, Scope definieren, Zeitplan und Ressourcen planen.</p>
+        </div>
+
+        <div class="sp-pdca-step fade-up">
+          <div class="sp-step-number">2</div>
+          <h3>Umsetzen & Implementieren</h3>
+          <p>Arbeitspakete durchführen, Risiken managen, Qualität sichern, Stakeholder eingebunden halten.</p>
+        </div>
+
+        <div class="sp-pdca-step fade-up">
+          <div class="sp-step-number">3</div>
+          <h3>Prüfen & Messen</h3>
+          <p>Fortschritt gegen Plan prüfen, Abweichungen identifizieren, Kennzahlen auswerten.</p>
+        </div>
+
+        <div class="sp-pdca-step fade-up">
+          <div class="sp-step-number">4</div>
+          <h3>Standardisieren & Verbessern</h3>
+          <p>Erfolgsfaktoren verankern, Lessons Learned dokumentieren, Prozesse optimieren.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SP-FAQ ===== -->
+  <section class="sp-faq">
+    <div class="sp-faq-inner">
+      <div class="sp-faq-label fade-up">FAQ</div>
+      <h2 class="fade-up">Häufig gestellte Fragen</h2>
+      <div class="sp-faq-list">
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <span class="faq-question-text">Welche PM-Methoden setzen Sie ein?</span>
+            <span class="faq-question-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Wir setzen bewährte Methoden ein: klassisches Wasserfall-Modell für stabile, vorhersehbare Projekte; agile Methoden (Scrum, Kanban) für dynamische, iterative Projekte; und Hybrid-Modelle, wenn klassische und agile Ansätze kombiniert sinnvoll sind.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <span class="faq-question-text">Wie gehen Sie mit Projektrisiken um?</span>
+            <span class="faq-question-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Risiken werden systematisch identifiziert, bewertet und klassifiziert. Für jedes relevante Risiko definieren wir Präventivmaßnahmen und Notfallpläne. Mit regelmäßiger Überwachung können wir schnell reagieren, bevor Risiken zu Problemen werden.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <span class="faq-question-text">Was kostet Projektmanagement-Beratung?</span>
+            <span class="faq-question-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Die Kosten hängen vom Projektumfang, der Komplexität und der Art der Unterstützung ab. Wir bieten flexible Modelle: Tagessätze, Pauschalpreise oder Retainer-Modelle. Gerne erstellen wir ein individuelles Angebot nach einer Anfangsanalyse.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <span class="faq-question-text">Bieten Sie auch agile Methoden an?</span>
+            <span class="faq-question-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Ja, absolut. Wir sind zertifiziert in Scrum, Kanban und anderen agilen Frameworks. Unser Team unterstützt Organisationen bei der Agile-Transformation und ist erfahren in der Etablierung agiler Kulturen.</p>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up">
+          <div class="faq-question">
+            <span class="faq-question-text">Wie messen Sie den Projekterfolg?</span>
+            <span class="faq-question-icon">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Erfolg wird gemessen anhand definierter Kriterien: Einhaltung von Zeitplan und Budget, Erreichung der vereinbarten Leistungsziele, Kundenzufriedenheit und langfristige Nachhaltigkeit. Wir setzen KPIs bereits in der Projektplanung fest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SP-CTA ===== -->
+  <section class="sp-cta">
+    <div class="sp-cta-inner">
+      <h2 class="fade-up">Projekt erfolgreich starten?</h2>
+      <p class="fade-up">Lassen Sie uns gemeinsam ein strukturiertes, risikobewusstes Projektmanagement-Framework aufbauen.</p>
+      <a href="kontakt.html" class="btn-cta-large fade-up">
+        Kontakt aufnehmen
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="QBM Stuttgart – Startseite" style="margin-bottom:16px;display:block;">
+          <div class="logo-icon">
+            <span style="background: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.8);"></span>
+            <span style="background: rgba(255,255,255,0.6); border-color: rgba(255,255,255,0.6);"></span>
+          </div>
+          <div style="color: var(--white);">
+            <div>QBM STUTTGART</div>
+            <div class="logo-text-sub" style="color: rgba(255,255,255,0.6);">Consulting</div>
+          </div>
+        </a>
+        <p class="footer-slogan">Ihr kompetenter Partner für Qualitäts- und Projektmanagement. Think Local, Act Global.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="index.html#ueber-uns">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 QBM Stuttgart. Alle Rechte vorbehalten.</span>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ===== STICKY HEADER ===== */
+    (function() {
+      const header = document.getElementById('header');
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScroll = currentScroll;
+      }, { passive: true });
+    })();
+
+    /* ===== HAMBURGER MENU ===== */
+    (function() {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = mobileMenu.querySelectorAll('.mobile-link');
+
+      hamburger.addEventListener('click', function() {
+        const isOpen = mobileMenu.classList.contains('open');
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', !isOpen);
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+      });
+
+      mobileLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+
+    /* ===== SCROLL ANIMATIONS (IntersectionObserver) ===== */
+    (function() {
+      const elements = document.querySelectorAll('.fade-up');
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        elements.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        elements.forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+    })();
+
+    /* ===== FAQ ACCORDION ===== */
+    (function() {
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(function(item) {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', function() {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(function(otherItem) {
+            otherItem.classList.remove('active');
+          });
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        });
+      });
+    })();
+
+    /* ===== SMOOTH SCROLL for anchor links ===== */
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const id = this.getAttribute('href');
+          if (id === '#') return;
+          const target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            const headerHeight = document.getElementById('header').offsetHeight;
+            const targetPos = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+            window.scrollTo({
+              top: targetPos,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interim Management | QBM Stuttgart</title>
+  <meta name="description" content="Erfahrene Führungskräfte auf Zeit für Ihr Unternehmen. Schnelle Besetzung von Vakanzen, Krisenmanagement und Transformation.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Raleway', system-ui, -apple-system, sans-serif;
+      background-color: #ffffff;
+      color: #333333;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ===== VARIABLES ===== */
+    :root {
+      --navy-dark: #071e3b;
+      --navy: #061d3a;
+      --navy-mid: #0a2347;
+      --navy-light: #0d2a54;
+      --accent: #f59e0b;
+      --accent-hover: #d97706;
+      --accent-gold: #f59e0b;
+      --accent-blue: #3580d9;
+      --white: #ffffff;
+      --gray-100: #f9fafb;
+      --gray-200: #f3f4f6;
+      --gray-400: rgba(255,255,255,0.4);
+      --gray-600: rgba(255,255,255,0.4);
+      --gray-800: #334155;
+      --text-dark: #1a1a1a;
+      --text-body: #1a1a1a;
+      --card-title: #061d3a;
+      --nav-link: #334155;
+      --radius: 12px;
+      --radius-lg: 16px;
+      --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-card-hover: 0 8px 40px rgba(0,0,0,0.12);
+      --max-width: 1200px;
+      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===== UTILITY ===== */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      transition: background var(--transition), box-shadow var(--transition), padding var(--transition);
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 92px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      color: var(--text-dark);
+    }
+
+    .logo-icon {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-right: 6px;
+    }
+
+    .logo-icon span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+    }
+
+    .logo-icon span:first-child {
+      background: var(--accent);
+    }
+
+    .logo-icon span:nth-child(2) {
+      border-color: #e74c3c;
+      background: #e74c3c;
+      margin-left: -4px;
+    }
+
+    .logo-text-sub {
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-body);
+      display: block;
+      margin-top: -2px;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .desktop-nav a {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--nav-link);
+      letter-spacing: normal;
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .desktop-nav a:hover {
+      color: var(--text-dark);
+    }
+
+    .desktop-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--nav-link);
+      transition: width var(--transition);
+    }
+
+    .desktop-nav a:hover::after {
+      width: 100%;
+    }
+
+    .btn-anfragen {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: var(--accent);
+      color: var(--navy) !important;
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+      letter-spacing: 0.78px;
+      text-transform: uppercase;
+    }
+
+    .btn-anfragen:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-anfragen::after {
+      display: none !important;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-dark);
+      transition: transform var(--transition), opacity var(--transition);
+      border-radius: 2px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .mobile-menu.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .mobile-menu a {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--nav-link);
+      letter-spacing: 0.5px;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--text-dark);
+    }
+
+    /* ===== SERVICE PAGE STYLES (sp-*) ===== */
+    .sp-hero {
+      padding: 160px 24px 80px;
+      background-color: var(--navy-dark);
+      position: relative;
+    }
+
+    .sp-hero .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sp-hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -1.2px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .sp-hero p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .breadcrumb {
+      display: flex;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+    }
+
+    .breadcrumb a {
+      color: rgba(255,255,255,0.6);
+      transition: color 0.3s;
+    }
+
+    .breadcrumb a:hover {
+      color: #fff;
+    }
+
+    .breadcrumb span {
+      color: var(--accent);
+    }
+
+    .sp-about {
+      padding: 80px 24px;
+      background: #fff;
+    }
+
+    .sp-about .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .sp-about h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 20px;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-about p {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .sp-highlight {
+      background: var(--gray-100);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 32px;
+    }
+
+    .sp-highlight blockquote {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .sp-highlight cite {
+      display: block;
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--text-body);
+      font-style: normal;
+    }
+
+    .sp-detail {
+      padding: 80px 24px;
+      background: var(--gray-100);
+    }
+
+    .sp-detail .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-detail h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 48px;
+      text-align: center;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .sp-detail-card {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .sp-detail-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .sp-detail-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .sp-detail-card p {
+      font-size: 0.88rem;
+      color: var(--text-body);
+      line-height: 1.65;
+    }
+
+    .sp-detail-card .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: var(--gray-100);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      color: var(--navy);
+    }
+
+    .sp-branchen {
+      padding: 80px 24px;
+      background: #fff;
+    }
+
+    .sp-branchen .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .sp-branchen h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 48px;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-branchen-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .sp-branche {
+      background: var(--gray-100);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.3s;
+    }
+
+    .sp-branche:hover {
+      transform: translateY(-2px);
+    }
+
+    .sp-branche-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .sp-branche h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .sp-nutzen {
+      padding: 80px 24px;
+      background-color: var(--navy-dark);
+    }
+
+    .sp-nutzen .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-nutzen h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 48px;
+      text-align: center;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-nutzen-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .sp-nutzen-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    }
+
+    .sp-nutzen-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(245,158,11,0.2);
+      transform: translateY(-4px);
+    }
+
+    .sp-nutzen-card .nutzen-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .sp-nutzen-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .sp-nutzen-card p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+    }
+
+    .sp-pdca {
+      padding: 80px 24px;
+      background: var(--gray-100);
+    }
+
+    .sp-pdca .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .sp-pdca h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 48px;
+      text-align: center;
+      letter-spacing: -0.8px;
+    }
+
+    .pdca-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+
+    .pdca-step {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius-lg);
+      padding: 32px 24px;
+      text-align: center;
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+      position: relative;
+    }
+
+    .pdca-step:hover {
+      background: #f9fafb;
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+    }
+
+    .pdca-step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .pdca-step p {
+      font-size: 0.85rem;
+      color: var(--text-body);
+      line-height: 1.65;
+    }
+
+    .sp-faq {
+      padding: 80px 24px;
+      background: #fff;
+    }
+
+    .sp-faq .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .sp-faq h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 48px;
+      text-align: center;
+      letter-spacing: -0.8px;
+    }
+
+    .faq-item {
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--gray-100);
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.95rem;
+      transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+      background: #f0f1f3;
+    }
+
+    .faq-question svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-question svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 20px 24px;
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    .sp-cta {
+      padding: 80px 24px;
+      background-color: var(--navy-dark);
+      text-align: center;
+    }
+
+    .sp-cta h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 16px;
+      letter-spacing: -0.8px;
+    }
+
+    .sp-cta p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 32px;
+    }
+
+    .btn-cta-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: var(--accent);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-cta-large:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232, 149, 46, 0.3);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 64px 24px 0;
+      background-image: url("https://www.qbm-stuttgart.com/wp-content/uploads/2026/02/header-background.png");
+      background-size: cover;
+      background-position: center;
+      background-color: var(--navy-dark);
+      color: var(--white);
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: 16px;
+    }
+
+    .footer-slogan {
+      font-size: 0.88rem;
+      color: var(--gray-400);
+      line-height: 1.65;
+      max-width: 300px;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.88rem;
+      color: var(--gray-400);
+      transition: color var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--gray-600);
+    }
+
+    .footer-bottom a {
+      color: var(--gray-600);
+      transition: color var(--transition);
+    }
+
+    .footer-bottom a:hover {
+      color: var(--gray-400);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .sp-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sp-branchen-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sp-nutzen-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sp-about .container {
+        grid-template-columns: 1fr;
+      }
+
+      .pdca-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .header-inner {
+        height: 64px;
+      }
+
+      .sp-hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .sp-detail-grid,
+      .sp-branchen-grid,
+      .sp-nutzen-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sp-about h2,
+      .sp-detail h2,
+      .sp-branchen h2,
+      .sp-nutzen h2,
+      .sp-faq h2,
+      .sp-cta h2 {
+        font-size: 1.8rem;
+      }
+
+      .pdca-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sp-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <span></span>
+          <span></span>
+        </div>
+        <span>QBM<span class="logo-text-sub">Stuttgart</span></span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="sp-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="leistungen.html">Leistungen</a>
+        <span>/</span>
+        <span>Interim Management</span>
+      </div>
+      <h1>Interim Management</h1>
+      <p>Erfahrene Führungskräfte auf Zeit für Ihren Erfolg. Schnelle Besetzung von Vakanzen, Krisenmanagement und erfolgreiche Transformation Ihres Unternehmens.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="sp-about">
+    <div class="container">
+      <div>
+        <h2>Führungskraft auf Zeit</h2>
+        <p>In Zeiten von Vakanzen, Krisen oder Transformationen benötigen Sie Führungskompetenz, die sofort zur Verfügung steht. Unsere Interim Manager bringen Erfahrung aus verschiedensten Branchen und Situationen mit und können innerhalb kürzester Zeit volle operative Verantwortung übernehmen.</p>
+        <p>Wir verstehen die Urgenz: Sie brauchen nicht nur einen Stellvertreter, sondern einen erfahrenen Führungskräfte, der sofort greift, objektiv wirtschaftet und Ihr Unternehmen voranbringt. Das ist unser Anspruch.</p>
+      </div>
+      <div class="sp-highlight">
+        <blockquote>Wir übernehmen Verantwortung — sofort, kompetent und ergebnisorientiert.</blockquote>
+        <cite>QBM Stuttgart</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Section - Services -->
+  <section class="sp-detail">
+    <div class="container">
+      <h2>Unser Leistungsspektrum</h2>
+      <div class="sp-detail-grid">
+        <div class="sp-detail-card">
+          <div class="card-icon">🔄</div>
+          <h3>Überbrückung von Vakanzen</h3>
+          <p>Schnelle und professionelle Besetzung von Führungspositionen während der Suche nach permanenten Kandidaten.</p>
+        </div>
+        <div class="sp-detail-card">
+          <div class="card-icon">⚠️</div>
+          <h3>Krisenmanagement</h3>
+          <p>Handlungsfähigkeit in kritischen Situationen mit sofortigen Stabilisierungsmaßnahmen und Sanierungsstrategien.</p>
+        </div>
+        <div class="sp-detail-card">
+          <div class="card-icon">🔧</div>
+          <h3>Restrukturierung</h3>
+          <p>Umstrukturierung von Unternehmen und Abteilungen mit fachwissen und neutraler Perspektive von außen.</p>
+        </div>
+        <div class="sp-detail-card">
+          <div class="card-icon">📋</div>
+          <h3>Projektleitung</h3>
+          <p>Leitende Verantwortung für strategische Projekte mit hoher Komplexität und Kritikalität.</p>
+        </div>
+        <div class="sp-detail-card">
+          <div class="card-icon">🌱</div>
+          <h3>Aufbau neuer Abteilungen</h3>
+          <p>Gründung und Etablierung von neuen Geschäftsbereichen mit bewährten Aufbaustrukturen.</p>
+        </div>
+        <div class="sp-detail-card">
+          <div class="card-icon">📚</div>
+          <h3>Wissenstransfer & Coaching</h3>
+          <p>Umfassende Einarbeitung des zukünftigen Leads und strukturierter Knowledge Transfer für Kontinuität.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Section -->
+  <section class="sp-branchen">
+    <div class="container">
+      <h2>Branchenerfahrung</h2>
+      <div class="sp-branchen-grid">
+        <div class="sp-branche">
+          <div class="sp-branche-icon">🚗</div>
+          <h3>Automotive</h3>
+        </div>
+        <div class="sp-branche">
+          <div class="sp-branche-icon">🏭</div>
+          <h3>Industrie & Fertigung</h3>
+        </div>
+        <div class="sp-branche">
+          <div class="sp-branche-icon">⚡</div>
+          <h3>Energie & Umwelt</h3>
+        </div>
+        <div class="sp-branche">
+          <div class="sp-branche-icon">💻</div>
+          <h3>IT & Telekommunikation</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="sp-nutzen">
+    <div class="container">
+      <h2>Ihre Vorteile</h2>
+      <div class="sp-nutzen-grid">
+        <div class="sp-nutzen-card">
+          <div class="nutzen-icon">⚡</div>
+          <h3>Sofortige Handlungsfähigkeit</h3>
+          <p>Unsere Interim Manager sind kurzfristig verfügbar und können innerhalb weniger Tage tätig werden.</p>
+        </div>
+        <div class="sp-nutzen-card">
+          <div class="nutzen-icon">🎓</div>
+          <h3>Erfahrung ohne Festanstellung</h3>
+          <p>Profitieren Sie von jahrzehntelanger Führungserfahrung, ohne langfristige Verpflichtungen einzugehen.</p>
+        </div>
+        <div class="sp-nutzen-card">
+          <div class="nutzen-icon">🔍</div>
+          <h3>Objektive Perspektive</h3>
+          <p>Die Sicht von außen auf interne Herausforderungen fördert ehrliche Analyse und schnelle Entscheidungen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PDCA Process Section -->
+  <section class="sp-pdca">
+    <div class="container">
+      <h2>Unser Einsatzmodell</h2>
+      <div class="pdca-steps">
+        <div class="pdca-step">
+          <div class="step-number">1</div>
+          <h3>Anforderung & Briefing</h3>
+          <p>Klärung der Anforderungen, Voraussetzungen und Erwartungen mit Ihrer Leitung.</p>
+        </div>
+        <div class="pdca-step">
+          <div class="step-number">2</div>
+          <h3>Vermittlung & Start</h3>
+          <p>Schnelle Verfügbarmachung der passenden Interim Manager und züglicher Einsatzstart.</p>
+        </div>
+        <div class="pdca-step">
+          <div class="step-number">3</div>
+          <h3>Einsatz & Feedback</h3>
+          <p>Aktive Zusammenarbeit mit regelmäßigen Status-Updates und Anpassungsmöglichkeiten.</p>
+        </div>
+        <div class="pdca-step">
+          <div class="step-number">4</div>
+          <h3>Übergabe & Abschluss</h3>
+          <p>Strukturierter Übergabeprozess und umfassender Abschlussreport mit Lessons Learned.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="sp-faq">
+    <div class="container">
+      <h2>Häufig gestellte Fragen</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Wie schnell können Sie eine Führungskraft bereitstellen?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            In der Regel können wir innerhalb von 5-10 Arbeitstagen eine passende Kandidatin oder einen Kandidaten zur Verfügung stellen. Bei akuten Notfällen arbeiten wir an noch schnelleren Lösungen.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Welche Positionen besetzen Sie?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Wir vermitteln Interim Manager für Geschäftsführung, Bereichsleitung, Projektmanagement und spezialisierte Fachpositionen. Von klassischem Divisionsleiter bis zu Transformations-PMO - wir haben das richtige Profil.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Wie werden die Kosten berechnet?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Die Kosten sind abhängig vom Qualifikationsprofil, der Dauer und dem Einsatzumfang. Wir arbeiten transparent mit Tagessätzen oder Pauschalgebühren, die flexibel an Ihre Anforderungen angepasst werden.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Was passiert, wenn wir den Interim Manager dauerhaft einstellen möchten?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Viele unserer Interim Manager sind offen für dauerhafte Positionen. Wir regeln solche Übergänge vertraglich fair für alle Beteiligten und unterstützen die nahtlose Transformation.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Können Sie Interim Manager mit spezifischem Branchenfokus bereitstellen?</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Ja, unser Netzwerk umfasst erfahrene Manager mit spezialisiertem Know-how in Automotive, Maschinenbau, Pharma, IT und vielen anderen Branchen. Wir matchen gezielt nach Ihren spezifischen Anforderungen.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="sp-cta">
+    <div class="container">
+      <h2>Bereit für Verstärkung?</h2>
+      <p>Lassen Sie uns gemeinsam die richtige Führungskraft für Ihre Herausforderung finden und einsetzen.</p>
+      <a href="kontakt.html" class="btn-cta-large">Kontakt aufnehmen</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">
+            <span></span>
+            <span></span>
+          </div>
+          <span>QBM<span class="logo-text-sub">Stuttgart</span></span>
+        </a>
+        <p class="footer-slogan">Qualitäts- und Projektmanagement Beratung für Ihre erfolgreiche Zukunft.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="consulting-und-beratung.html">Consulting</a></li>
+          <li><a href="interim-management.html">Interim Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:info@qbm-stuttgart.de">info@qbm-stuttgart.de</a></li>
+          <li><a href="tel:+4971160000">+49 711 60000</a></li>
+          <li><a href="kontakt.html">Kontaktformular</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 QBM Stuttgart. Alle Rechte vorbehalten.</p>
+      <div class="footer-legal">
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+        <a href="#">AGB</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+      });
+
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('open');
+        }
+      });
+    }
+
+    // Sticky Header on Scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll Animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.sp-detail-card, .sp-nutzen-card, .pdca-step').forEach(el => {
+      el.classList.add('fade-up');
+      observer.observe(el);
+    });
+
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('open');
+          otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+        });
+
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
