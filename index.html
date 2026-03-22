@@ -644,19 +644,74 @@
       transform: translateY(-4px);
     }
 
-    .step-number {
+    .step-label {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+    }
+
+    .step-label-plan {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent);
+    }
+
+    .step-label-do {
+      background: rgba(53, 128, 217, 0.15);
+      color: var(--accent-blue);
+    }
+
+    .step-label-check {
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+    }
+
+    .step-label-act {
+      background: rgba(168, 85, 247, 0.15);
+      color: #a855f7;
+    }
+
+    .step-icon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       width: 48px;
       height: 48px;
       border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .step-icon-plan {
       background: linear-gradient(135deg, var(--accent), var(--accent-hover));
       color: var(--white);
-      font-weight: 800;
-      font-size: 1.1rem;
-      margin-bottom: 20px;
       box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+    }
+
+    .step-icon-do {
+      background: linear-gradient(135deg, #3580d9, #2563eb);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(53, 128, 217, 0.3);
+    }
+
+    .step-icon-check {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
+    }
+
+    .step-icon-act {
+      background: linear-gradient(135deg, #a855f7, #7c3aed);
+      color: var(--white);
+      box-shadow: 0 4px 16px rgba(168, 85, 247, 0.3);
+    }
+
+    .step-icon svg {
+      width: 22px;
+      height: 22px;
     }
 
     .pdca-step h3 {
@@ -756,6 +811,104 @@
 
     .btn-cta-large:hover svg {
       transform: translateX(3px);
+    }
+
+    /* ===== STATS / ZAHLEN & FAKTEN ===== */
+    .stats-section {
+      padding: 80px 24px;
+      background: var(--gray-100);
+      position: relative;
+    }
+
+    .stats-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .stats-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .stats-label::before,
+    .stats-label::after {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .stats-section h2 {
+      font-size: 48px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 48px;
+      letter-spacing: -1.2px;
+      line-height: 52.8px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 32px 16px;
+      border: 1px solid var(--gray-200);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--navy);
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .stat-number .stat-suffix {
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-body);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+
+      .stats-section h2 {
+        font-size: 2rem;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     /* ===== FOOTER ===== */
@@ -1205,7 +1358,7 @@
     <div class="hero-content">
       <h1 class="fade-up">
         Go for<br>
-        <span class="highlight">Quality.</span>
+        <span class="highlight">Efficiency!</span>
       </h1>
       <p class="hero-sub fade-up">
         Ihr kompetenter Partner in den Bereichen Qualitäts- und Projektmanagement. Strukturiert, zuverlässig, ergebnisorientiert.
@@ -1324,25 +1477,37 @@
 
       <div class="pdca-steps">
         <div class="pdca-step fade-up">
-          <div class="step-number">1</div>
+          <div class="step-label step-label-plan">PLAN</div>
+          <div class="step-icon step-icon-plan">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
           <h3>Analysieren &amp; Planen</h3>
           <p>Ist-Zustand erfassen, Ziele definieren und einen klaren Maßnahmenplan erarbeiten.</p>
         </div>
 
         <div class="pdca-step fade-up">
-          <div class="step-number">2</div>
+          <div class="step-label step-label-do">DO</div>
+          <div class="step-icon step-icon-do">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
           <h3>Umsetzen &amp; Implementieren</h3>
           <p>Maßnahmen operativ umsetzen – direkt am Shopfloor, praxisnah und strukturiert.</p>
         </div>
 
         <div class="pdca-step fade-up">
-          <div class="step-number">3</div>
+          <div class="step-label step-label-check">CHECK</div>
+          <div class="step-icon step-icon-check">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
           <h3>Prüfen &amp; Messen</h3>
           <p>Ergebnisse gegen Ziele prüfen, Kennzahlen auswerten und Abweichungen identifizieren.</p>
         </div>
 
         <div class="pdca-step fade-up">
-          <div class="step-number">4</div>
+          <div class="step-label step-label-act">ACT</div>
+          <div class="step-icon step-icon-act">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
           <h3>Standardisieren &amp; Verbessern</h3>
           <p>Erfolgreiche Maßnahmen verankern, Standards setzen und den nächsten Zyklus starten.</p>
         </div>
@@ -1359,6 +1524,32 @@
         Projekt besprechen
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
+    </div>
+  </section>
+
+  <!-- ===== ZAHLEN & FAKTEN ===== -->
+  <section class="stats-section">
+    <div class="stats-inner">
+      <div class="stats-label fade-up">Zahlen &amp; Fakten</div>
+      <h2 class="fade-up">Ergebnisse, die sprechen.</h2>
+      <div class="stats-grid">
+        <div class="stat-card fade-up">
+          <div class="stat-number">150<span class="stat-suffix">+</span></div>
+          <div class="stat-label">Kunden &amp; Partner</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-number">98<span class="stat-suffix">%</span></div>
+          <div class="stat-label">Kundenzufriedenheit</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-number">29<span class="stat-suffix">+</span></div>
+          <div class="stat-label">Berufserfahrung</div>
+        </div>
+        <div class="stat-card fade-up">
+          <div class="stat-number">365<span class="stat-suffix">+</span></div>
+          <div class="stat-label">Kaffee pro Jahr</div>
+        </div>
+      </div>
     </div>
   </section>
 
